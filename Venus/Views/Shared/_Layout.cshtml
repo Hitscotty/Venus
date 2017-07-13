@@ -7,13 +7,23 @@
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+		<link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" /> 
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" href="~/css/site.css" />
+		<link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" property="" />
+        <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+			     <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" /> 
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
     </environment>
 </head>
 <body>
@@ -30,14 +40,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="Error">Birth Charts</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="Error">Horoscopes</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="fluid">
         @RenderBody()
         <hr />
         <footer>
